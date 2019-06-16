@@ -1,0 +1,288 @@
+ /* 中间banner */
+ 
+ .banner img {
+     width: 100%;
+ }
+ /* 头部开始 */
+ 
+ .header {
+     height: 80px;
+ }
+ 
+ .header .icon {
+     float: left;
+     margin-left: 250px;
+     width: 334px;
+     height: 65px;
+     margin-top: 15px;
+ }
+ 
+ .header .nav {
+     position: relative;
+     height: 100%;
+     width: 575px;
+     float: right;
+     margin-right: 250px;
+ }
+ 
+ .header .nav ul {
+     float: right;
+     margin-top: 15px;
+ }
+ 
+ .header .nav ul li {
+     float: left;
+     margin-right: 61px;
+ }
+ 
+ .header .nav ul li:hover {
+     cursor: pointer;
+ }
+ /* 定义滑块 */
+ 
+ .huakuai {
+     position: absolute;
+     left: 454px;
+     bottom: 0;
+     width: 60px;
+     height: 2px;
+     background-color: #6bbd03;
+ }
+ /* 中间关于飓风开始 */
+ 
+ .aboutUs .aboutJufeng {
+     width: 1203px;
+     margin: 45px auto;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .aboutUs .aboutJufeng .content {
+     width: 750px;
+ }
+ 
+ .aboutUs .aboutJufeng .content .font {
+     width: 130px;
+     height: 65px;
+     background: url('../images/关于我们切图.png') no-repeat 0 0;
+     margin-top: 83px;
+     margin-left: 535px;
+ }
+ 
+ .aboutUs .aboutJufeng .content .text {
+     width: 610px;
+     margin: 50px auto 0;
+     word-break: break-all;
+     font: 400 14px/25px '微软雅黑 Regular';
+ }
+ /* 中间关于飓风结束 */
+ /* 中间飓风发展开始 */
+ 
+ .aboutUs .development .font {
+     width: 133px;
+     height: 66px;
+     background: url('../images/关于我们切图.png') no-repeat 0 -88px;
+     margin: 88px auto 76px;
+ }
+ 
+ .aboutUs .development .timeX {
+     width: 100%;
+     height: 160px;
+     margin-bottom: 62px;
+ }
+ 
+ .aboutUs .development .timeX .time {
+     width: 100%;
+     height: 2px;
+     background-color: #cccccc;
+     margin-top: 236px;
+ }
+ 
+ .aboutUs .development .timeX .time ul {
+     width: 1000px;
+     /* position: relative; */
+     display: flex;
+     justify-content: space-between;
+     margin-left: 550px;
+ }
+ 
+ .aboutUs .development .timeX .time ul li {
+     width: 20px;
+     height: 20px;
+ }
+ 
+ .aboutUs .development .timeX .time ul li .circular {
+     width: 20px;
+     height: 20px;
+     background: #ccc;
+     border-radius: 50%;
+     position: relative;
+     top: -10px;
+     /* left: 304px; */
+ }
+ 
+ .aboutUs .development .timeX .time ul li .circular::after {
+     content: "";
+     display: block;
+     width: 24px;
+     height: 24px;
+     border-radius: 50%;
+     position: absolute;
+     left: -3px;
+     top: -3px;
+     border: 1px solid #ccc;
+ }
+ 
+ .aboutUs .development .timeX .time ul li:nth-child(2n-1) .yxian {
+     width: 1px;
+     height: 122px;
+     background: #ccc;
+     position: relative;
+     bottom: 157px;
+     left: 9px;
+ }
+ 
+ .aboutUs .development .timeX .time ul li:nth-child(2n-1) .yxian::after {
+     content: "";
+     display: block;
+     width: 15px;
+     height: 1px;
+     position: absolute;
+     right: 0px;
+     top: 0px;
+     background: #ccc;
+ }
+ 
+ .aboutUs .development .timeX .time ul li:nth-child(2n) .yxian {
+     width: 1px;
+     height: 122px;
+     background: #ccc;
+     position: relative;
+     bottom: 4px;
+     left: 9px;
+ }
+ 
+ .aboutUs .development .timeX .time ul li:nth-child(2n) .yxian::after {
+     content: "";
+     display: block;
+     width: 15px;
+     height: 1px;
+     position: absolute;
+     right: -15px;
+     top: 122px;
+     background: #ccc;
+ }
+ 
+ .aboutUs .development .timeX .time ul li:nth-child(2n-1) .text {
+     width: 170px;
+     height: 53px;
+     position: relative;
+     bottom: 300px;
+     left: -177px;
+     font: 400 12px/20px '微软雅黑';
+     word-break: break-all;
+ }
+ 
+ .aboutUs .development .timeX .time ul li:nth-child(2n) .text {
+     width: 170px;
+     height: 53px;
+     position: relative;
+     bottom: 22px;
+     left: 30px;
+     font: 400 12px/20px '微软雅黑';
+     word-break: break-all;
+ }
+ /* .aboutUs .development .timeX .time ul li:nth-child(2) .circular{
+    left: 465px;
+}
+.aboutUs .development .timeX .time ul li:nth-child(3) .circular{
+    left: 625px;
+}
+.aboutUs .development .timeX .time ul li:nth-child(4) .circular{
+    left: 786px;
+}
+.aboutUs .development .timeX .time ul li:nth-child(5) .circular{
+    left: 945px;
+}
+.aboutUs .development .timeX .time ul li:nth-child(6) .circular{
+    left: 1107px;
+}
+.aboutUs .development .timeX .time ul li:nth-child(7) .circular{
+    left: 1277px;
+} */
+ /* 中间飓风发展结束 */
+ /* 中间的图片开始 */
+ 
+ .aboutUs .aboutUsImg {
+     width: 1203px;
+     height: 491px;
+ }
+ 
+ .aboutUs .aboutUsImg .left {
+     width: 575px;
+     height: 491px;
+     float: left;
+ }
+ 
+ .aboutUs .aboutUsImg .left img {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .aboutUs .aboutUsImg .right {
+     width: 628px;
+     height: 491px;
+     float: right;
+ }
+ 
+ .aboutUs .aboutUsImg .right-top {
+     width: 100%;
+     /* height: ; */
+     height: 249px;
+ }
+ 
+ .aboutUs .aboutUsImg .right-top img {
+     height: 100%;
+     width: 100%;
+ }
+ 
+ .aboutUs .aboutUsImg .right-bottom {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .aboutUs .aboutUsImg .right-bottom-left {
+     width: 317px;
+     height: 243px;
+ }
+ 
+ .aboutUs .aboutUsImg .right-bottom-left img {
+     width: 100%;
+     height: 100%;
+ }
+ /* 中间的图片结束 */
+ /* 中间飓风文化开始 */
+ 
+ .aboutUs .culture {
+     clear: both;
+     margin-bottom: 52px;
+     width: 1203px;
+     position: relative;
+ }
+ 
+ .aboutUs .culture .font {
+     width: 133px;
+     height: 67px;
+     background: url('../images/关于我们切图.png') no-repeat 0 -349px;
+     margin: 88px auto 76px;
+ }
+ 
+ .aboutUs .culture .font2 {
+     width: 662px;
+     height: 135px;
+     background: url('../images/关于我们切图.png') no-repeat -9px -439px;
+     position: absolute;
+     left: 550px;
+     bottom: 146px;
+ }
+ /* 中间飓风文化结束 */

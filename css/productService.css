@@ -1,0 +1,173 @@
+  /* 中间banner */
+  
+  .banner img {
+      width: 100%;
+  }
+  /* 头部开始 */
+  
+  .header {
+      height: 80px;
+  }
+  
+  .header .icon {
+      float: left;
+      margin-left: 250px;
+      width: 334px;
+      height: 65px;
+      margin-top: 15px;
+  }
+  
+  .header .nav {
+      position: relative;
+      height: 100%;
+      width: 575px;
+      float: right;
+      margin-right: 250px;
+  }
+  
+  .header .nav ul {
+      float: right;
+      margin-top: 15px;
+  }
+  
+  .header .nav ul li {
+      float: left;
+      margin-right: 61px;
+  }
+  
+  .header .nav ul li:hover {
+      cursor: pointer;
+  }
+  /* 定义滑块 */
+  
+  .huakuai {
+      position: absolute;
+      left: 212px;
+      bottom: 0;
+      width: 60px;
+      height: 2px;
+      background-color: #6bbd03;
+  }
+  /* 中间产品服务开始 */
+  
+  .productService .pService .font {
+      width: 900px;
+      height: 60px;
+      background: url('../images/产品服务切图.png') no-repeat 0 0;
+      margin: 100px auto 60px;
+  }
+  
+  .productService .pService .projectImg ul {
+      width: 1203px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .productService .pService .projectImg ul li {
+      width: 574px;
+      height: 174px;
+      border: 1px solid #ccc;
+      margin-bottom: 70px;
+      position: relative;
+      transition: all 0.7s ease;
+  }
+  
+  .productService .pService .projectImg ul li:hover {
+      border: 1px solid #6bbd03;
+  }
+  
+  .productService .pService .projectImg ul li img {
+      margin-top: -25px;
+      margin-left: 3px;
+  }
+  
+  .productService .pService .projectImg ul:nth-child(2) li img {
+      margin-top: -21px;
+  }
+  
+  .productService .pService .projectImg ul li .text1 {
+      position: absolute;
+      left: 278px;
+      top: 37px;
+      font: 700 17px/17px 'Microsoft YaHei';
+      color: #555555;
+      margin-bottom: 16px;
+      transition: all 0.7s ease;
+  }
+  
+  .productService .pService .projectImg ul li:hover .text1 {
+      color: #6bbd03;
+  }
+  
+  .productService .pService .projectImg ul li .text2 {
+      position: absolute;
+      left: 278px;
+      top: 72px;
+      font: 400 12px/22px 'Microsoft YaHei';
+      color: #555555;
+      margin-bottom: 16px;
+  }
+  /* 中间产品服务结束 */
+  /* 中间问题快响应开始 */
+  
+  .productService .question {
+      margin-bottom: 60px;
+  }
+  
+  .productService .question .font {
+      width: 175px;
+      height: 59px;
+      background: url('../images/产品服务切图.png') no-repeat -3px -81px;
+      margin: 100px auto 60px;
+  }
+  
+  .productService .question .lianxi {
+      width: 400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .productService .question .lianxi .questionSubmit .font1 {
+      width: 40px;
+      height: 46px;
+      background: url('../images/产品服务切图.png') no-repeat -8px -164px;
+      margin: 0 auto 17px;
+  }
+  
+  .productService .question .lianxi .questionSubmit .text {
+      font: 400 17px/17px 'Microsoft YaHei';
+      color: #8e8e8e;
+  }
+  
+  .productService .question .lianxi .questionSubmit input {
+      background-color: #6bbd03;
+      width: 79px;
+      height: 28px;
+      display: block;
+      margin: 10px auto 0;
+      border: none;
+      color: white;
+  }
+  
+  .productService .question .lianxi .kefu .font1 {
+      width: 54px;
+      height: 45px;
+      background: url('../images/产品服务切图.png') no-repeat -108px -164px;
+      margin: 0 auto 17px;
+  }
+  
+  .productService .question .lianxi .kefu .text {
+      font: 400 17px/17px 'Microsoft YaHei';
+      color: #8e8e8e;
+      text-align: center;
+      margin-bottom: 18px;
+  }
+  
+  .productService .question .lianxi .kefu .text2 {
+      font: 400 16px/16px 'Microsoft YaHei';
+      text-align: center;
+      color: #bbb;
+  }
+  /* 中间问题快响应结束 */

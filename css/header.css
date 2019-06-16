@@ -1,0 +1,77 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* a{
+            text-decoration: none;
+            outline: none;
+            color:#555555;
+        }
+        a:visited{
+            color:#6bbd03;
+        } */
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1882px;
+    margin: 0 auto;
+}
+
+
+/* 字体的默认样式 */
+
+.fontSC {
+    font-size: 15px;
+    font-weight: 500;
+    color: #666666;
+    font-family: "微软雅黑";
+    line-height: 64px;
+}
+
+
+/* 鼠标放上字体颜色变化的样式 */
+
+.fontactive {
+    font-size: 15px;
+    color: #6bbd03;
+    font-weight: 500;
+    font-family: "微软雅黑";
+    line-height: 64px;
+    /* border-bottom: 2px solid #6bbd03; */
+}
+
+
+/* 默认字体样式，不带行高 */
+
+.fontMo {
+    font-size: 15px;
+    font-weight: 500;
+    color: #666666;
+    font-family: "微软雅黑";
+}
+
+
+/* 默认绿色字体样式 */
+
+.fontGreen {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6bbd03;
+    font-family: "微软雅黑";
+}
+
+
+/* 固定的背景颜色 */
+
+.bgc {
+    background-color: #6bbd03;
+}
