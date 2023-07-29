@@ -69,8 +69,8 @@ console.log(prevPage.route); //举例：输出为‘pages/index/index’
 
 ### 如何辨别不过小程序或者公众号是否同一用户
 
-1、通过 unionid 来判断，如果相同，表示同一用户。、
-openId 公众号 小程序的 openId 是可能不同
+- 1、通过 unionid 来判断，如果相同，表示同一用户。
+- 2、openId 公众号 小程序的 openId 是可能不同
 
 ### 微信授权流程
 
@@ -80,9 +80,9 @@ openId 公众号 小程序的 openId 是可能不同
 
 ### 如何获取 openID 和 unionId
 
-第一步： 通过 wx.login 获取用户凭证 获取到 code 有效期 5 分钟
-第二步： 开发者调用开发者服务器接口（code + appid(应用 id) + secret(应用密钥)），服务器去调用微信的 auth.code2Session 获取到 openID 和 unionId （可能为空，需要注册开放平台）还有 session_key
-为什么不直接前端去调用服务器接口呢，反正别人抓包到前端 appid 和 secret， 所以将这两个参数存储到后端，由后端去给微信服务器发送请求
+- 第一步： 通过 wx.login 获取用户凭证 获取到 code 有效期 5 分钟
+- 第二步： 开发者调用开发者服务器接口（code + appid(应用 id) + secret(应用密钥)），服务器去调用微信的 auth.code2Session 获取到 openID 和 unionId （可能为空，需要注册开放平台）还有 session_key
+- 为什么不直接前端去调用服务器接口呢，反正别人抓包到前端 appid 和 secret， 所以将这两个参数存储到后端，由后端去给微信服务器发送请求
 
 
 ### setStorage 和 setStorageSync 的区别
