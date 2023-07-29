@@ -108,3 +108,24 @@ openId 公众号 小程序的 openId 是可能不同
 - 7、textarea 层级问题
 问题：textarea 的 placeholder 会显示在弹窗的层级之上
 解决：使用 wx:if 判断当没有值的时候用 view 代替 textarea 最好封装为组件 或者 弹出层使用 cover-view 组件，而不是 view，覆盖住所有原生组件。
+
+
+### 微信小程序可以进行dom操作吗
+
+- 不可以操作dom,可以通过setData 改变页面内容，达到改变dom的目的
+- 虽然微信小程序不能进行像HTML一样的DOM操作，但它提供了一套完整的组件和API体系，能够满足大部分的页面需求，并且有利于提高小程序的性能和可维护性。
+
+
+### 微信小程序事件通道的使用
+
+- 不同页面之间进行信息，类似于eventBus
+```javascript
+const eventChannel = this.getOpenerEventChannel();
+eventChannel.emit('eventName', {data: 'hello'})
+
+const eventChannel = this.getOpenerEventChannel();
+eventChannel.on('eventName', data => {
+  console.log(data); // {data: 'hello'}
+});
+```
+
