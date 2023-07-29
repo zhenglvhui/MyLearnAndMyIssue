@@ -63,15 +63,15 @@ destroyModel({
 });
 ```
 
-### switch case 使用枚举是，如何在新增枚举类型的时候，就抛出错误，使开发者快速找到(never的妙用)
+### switch case 使用枚举是，如何在新增枚举类型的时候，就抛出错误，使开发者快速找到(never 的妙用)
 
 ```typescript
 enum ENUM_INFO {
   TYPE1 = 1,
-  TYPE2 = 2
+  TYPE2 = 2,
 }
 function showMessage(info: ENUM_INFO) {
-  switch ( info) {
+  switch (info) {
     case ENUM_INFO.TYPE1:
       console.log(info);
       break;
