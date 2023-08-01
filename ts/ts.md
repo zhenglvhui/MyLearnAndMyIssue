@@ -11,7 +11,7 @@ interface ifDestroyModel<K extends keyof HTMLElementEventMap> {
   modelScene: THREE.Group,
   scene: THREE.Scene,
   type?: K,
-  throttleOnDocumentMouseMove?: (this: HTMLElement, event: HTMLElementEventMap[K]) => any
+  throttleOnDocumentMouseMove?: (this: HTMLElement, event: HTMLElementEventMap[K]) => void
 }
 
 type ifKeyOfIfDestroyModel<K extends keyof HTMLElementEventMap> = [
