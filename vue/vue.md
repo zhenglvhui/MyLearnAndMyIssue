@@ -52,7 +52,7 @@ const defer = userDefer(2);
 - 双向绑定方式不同，vue2 Object.defineProperty, vue3 是 Proxy 
 - vue3 完全支持 typescript，提高项目的可维护性
 - template 可以作为根节点
-- vue3 提供了组合式和选项式两种编程模式 vue2只有选项式
+- vue3 提供了组合式和选项式两种编程模式 vue2只有选项式 组合式会更加的灵活
 - setup
   - vue3 的 setup 中 data 优先级最高
   - setup 位于 beforeCreated 之前,用于代替 created 和 beforeCreated。由于 setup 函数执行的时候项目还没有进行初始化，所以不能访问 data 或 methods 中的数据，console.log(this)显示为 undefind。，所以会有很多系统自带的钩子来解决这个问题，比如 useRouter useStore  
@@ -72,6 +72,21 @@ const dracoLoader: DRACOLoader = new DRACOLoader();
 dracoLoader.setDecoderPath("/draco/");
 const app = createApp(App);
 app.config.globalProperties.$dracoLoader = dracoLoader;
+```
+
+### watchEffect,watch 停止监听
+
+```javascript
+let age = ref(0);
+const stopWatchAge = watchEffect(() => {
+  console.log("age:", age.value);
+});
+const changeAge = () => {
+  age.value++;
+  if (age.value > 25) {
+    stopWatchAge();
+  }
+};
 ```
 
 ### 递归组件
