@@ -3,7 +3,7 @@
 ### 如果希望一个函数的参数，既可以用数组的形式传递，又可以对象的形式传递，可以用重载的方式
 
 ```typescript
-interface ifDestroyModel<K extends keyof HTMLElementEventMap> {
+interface ItDestroyModel<K extends keyof HTMLElementEventMap> {
   container: Ref<HTMLElement | null>,
   animationID: number,
   camera: THREE.PerspectiveCamera,
@@ -14,7 +14,7 @@ interface ifDestroyModel<K extends keyof HTMLElementEventMap> {
   throttleOnDocumentMouseMove?: (this: HTMLElement, event: HTMLElementEventMap[K]) => void
 }
 
-type ifKeyOfIfDestroyModel<K extends keyof HTMLElementEventMap> = [
+type ItKeyOfIfDestroyModel<K extends keyof HTMLElementEventMap> = [
   container: Ref<HTMLElement | null>,
   animationID: number,
   camera: THREE.PerspectiveCamera,
@@ -25,10 +25,10 @@ type ifKeyOfIfDestroyModel<K extends keyof HTMLElementEventMap> = [
   throttleOnDocumentMouseMove?: (this: HTMLElement, event: HTMLElementEventMap[K]) => void
 ]
 
-function destroyModel<K extends keyof HTMLElementEventMap>(args: ifDestroyModel<K>): void;
-function destroyModel<K extends keyof HTMLElementEventMap>(...args: ifKeyOfIfDestroyModel<K>): void;
+function destroyModel<K extends keyof HTMLElementEventMap>(args: ItDestroyModel<K>): void;
+function destroyModel<K extends keyof HTMLElementEventMap>(...args: ItKeyOfIfDestroyModel<K>): void;
 function destroyModel<K extends keyof HTMLElementEventMap>(...args: any[]): void {
-  let fnArg: ifDestroyModel<K>;
+  let fnArg: ItDestroyModel<K>;
   if (args.length === 1) {
     fnArg = args[0];
   } else {
