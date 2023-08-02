@@ -3,7 +3,68 @@
 ### 写一个发布订阅者模式
 
 ```typescript
+interface ItEvent {
+    on: (eventName: string, cb: (...args: any[]) => void) => void,
+    emit: (eventName: string, ...args: any[]) => void,
+    off: (eventName: string, cb: (...args: any[]) => void) => void,
+    once: (eventName: string, cb: (...args: any[]) => void) => void,
+}
 
+type ItEventsList = Array<(...args: any[]) => void>;
+
+interface ItEvents {
+    [eventName: string]: ItEventsList;
+}
+
+class MyEvent implements ItEvent {
+    private events: ItEvents;
+    constructor() {
+        this.events = {};
+    }
+    on(eventName: string, cb: (...args: any[]) => void): void {
+        let eventList: ItEventsList = this.events[eventName] || [];
+        this.events[eventName] = [...eventList, cb];
+    };
+    emit(eventName: string, ...args: any[]): void {
+        let eventList: ItEventsList = this.events[eventName] || [];
+        if (eventList.length === 0) console.error(`emit::Event ${eventName} 没有被监听`)
+        eventList.forEach(cb => cb(...args));
+    };
+    off(eventName: string, cb: (...args: any[]) => void): void {
+        let eventList: ItEventsList = this.events[eventName] || [];
+        if (eventList.length === 0) console.error(`off::没有Event ${eventName} 可以取消监听`);
+        // eventList.splice(eventList.findIndex(item => cb === item), 1); // 这里不能使用splice 配合 once使用，会导致数组下标改变，once之后的下一个函数不执行
+        this.events[eventName] = eventList.filter(item => item !== cb);
+    };
+    once(eventName: string, cb: (...args: any[]) => void): void {
+        let newCb = (...args: any[]) => {
+            cb.apply(this, args);
+            this.off(eventName, newCb);
+        }
+        this.on(eventName, newCb);
+    };
+
+}
+let myEvent = new MyEvent();
+let fn = (...args: any[]) => {
+    console.log(22);
+}
+myEvent.once('aaa', (...args) => {
+    console.log(33);
+})
+myEvent.once('aaa', (...args) => {
+    console.log(11);
+})
+myEvent.on('aaa', fn)
+myEvent.on('bb', (...args) => {
+    console.log(44);
+})
+myEvent.emit('aaa', 1, 2, 3)
+myEvent.emit('aaa', 1, 2, 3)
+myEvent.emit('aaa', 1, 2, 3)
+myEvent.off('aaa', fn)
+myEvent.emit('aaa', 1, 2, 3)
+myEvent.emit('bb', 1, 2, 3)
 ```
 
 ### 如果希望一个函数的参数，既可以用数组的形式传递，又可以对象的形式传递，可以用重载的方式
