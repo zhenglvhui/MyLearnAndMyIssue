@@ -35,7 +35,7 @@
 ### react 生命周期(16.+以后)
 
 - 废弃 componentWillMount componentWillReceiveProps componentWillUpdate(防止被滥用)
-- 新增 getStateFromProps getSnapStopBeforeUpdate
+- 新增 getDerivedStateFromProps getSnapStopBeforeUpdate
 - getDerivedStateFromProps 它是一个静态方法，在这里不能调用 this
 
 ### react 组件的划分业务组件技术组件？
